@@ -2,8 +2,9 @@
   "name": "rsc",
   "version": "0.1.87",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "next",
+    "react-dom": "next",
+    "react-server-dom-webpack": "next",
     "web-vitals": "^3.0.3"
   },
   "eslintConfig": {
