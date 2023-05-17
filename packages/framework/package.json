@@ -1,20 +1,19 @@
 {
-  "name": "rsc",
+  "name": "bun-basket",
   "version": "0.0.1",
-  "workspaces": [
-    "packages/framework",
-    "packages/app"
-  ],
+  "bin": "./build/basket.js",
+  "scripts": {
+    "build": "bun run ./scripts/build.ts && chmod +x ./build/basket.js"
+  },
+  "exports": {
+    "./server": "./build/server.js",
+    "./client": "./build/client.js"
+  },
   "dependencies": {
     "react": "next",
     "react-dom": "next",
     "react-server-dom-webpack": "next",
     "web-vitals": "^3.0.3"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
@@ -23,9 +22,5 @@
     "typescript": "latest",
     "react-refresh": "0.10.0"
   },
-  "scripts": {
-    "dev": "bun run dev.tsx"
-  },
-  "module": "index.ts",
   "type": "module"
 }

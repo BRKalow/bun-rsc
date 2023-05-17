@@ -1,0 +1,7 @@
+{
+  "name": "basket-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "bun-basket": "workspace:*"
+  }
+}

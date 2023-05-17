@@ -1,4 +1,4 @@
-import Button from "./button";
+import Button from "../components/button";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         >
           Read the docs →
         </a>
+        <br />
         <Button>Click me</Button>
       </article>
     </div>

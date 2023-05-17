@@ -48,7 +48,9 @@
       // we just use webpack's function names to avoid forking react
       const ROOT = "http://localhost:3000/";
       global.__webpack_chunk_load__ = async function (moduleId) {
-        const mod = await import("//" + window.location.host + "/" + moduleId);
+        const mod = await import(
+          "//" + window.location.host + "/_basket/static/" + moduleId
+        );
         __bun__module_map__.set(moduleId, mod);
         return mod;
       };
@@ -74,6 +76,6 @@
         return nativeFetch(...args);
       };
     </script>
-    <script src="/index.js" async type="module"></script>
+    <script src="/_basket/static/client.js" async type="module"></script>
   </body>
 </html>
